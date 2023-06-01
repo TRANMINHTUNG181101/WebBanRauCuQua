@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.33529.622
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebBanRauCuQua", "WebBanRauCuQua\WebBanRauCuQua.csproj", "{294E0A10-F1AD-4F92-9946-51FEDCA0B5DE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{294E0A10-F1AD-4F92-9946-51FEDCA0B5DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{294E0A10-F1AD-4F92-9946-51FEDCA0B5DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{294E0A10-F1AD-4F92-9946-51FEDCA0B5DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{294E0A10-F1AD-4F92-9946-51FEDCA0B5DE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {43501280-A56B-44F4-9A50-B40C5B03E003}
+	EndGlobalSection
+EndGlobal
