@@ -1,9 +1,11 @@
-﻿using System;
+﻿using PagedList;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using WebBanRauCuQua.Models;
+using WebBanRauCuQua.Models.EF;
 
 namespace WebBanRauCuQua.Controllers
 {
@@ -12,9 +14,22 @@ namespace WebBanRauCuQua.Controllers
         private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: Products
-        public ActionResult Index()
+        public ActionResult Index(int? page)
         {
-            var items = db.Products.ToList();
+            var pageSize = 8;
+            if (page == null)
+            {
+                page = 1;
+            }
+
+            IEnumerable<Product> items = db.Products.ToList();
+            var pageIndex = page.HasValue
+                ? Convert.ToInt32(page)
+                : 1;
+
+            items = items.ToPagedList(pageIndex, pageSize);
+            ViewBag.PageSize = pageSize;
+            ViewBag.Page = page;
             return View(items);
         }
 
@@ -58,6 +73,12 @@ namespace WebBanRauCuQua.Controllers
         public ActionResult Partial_ProductSales()
         {
             var items = db.Products.Where(x => x.IsSale && x.IsActive).Take(12).ToList();
+            return PartialView(items);
+        }
+
+        public ActionResult Partial_ProductSellers()
+        {
+            var items = db.Products.Where(x => x.IsHot && x.IsActive).Take(6).ToList();
             return PartialView(items);
         }
     }

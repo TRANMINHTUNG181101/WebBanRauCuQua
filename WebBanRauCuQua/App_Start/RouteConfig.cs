@@ -28,6 +28,13 @@ namespace WebBanRauCuQua
             );
 
             routes.MapRoute(
+                name: "vnpay_return",
+                url: "vnpay_return",
+                defaults: new { controller = "ShoppingCart", action = "VnpayReturn", alias = UrlParameter.Optional },
+                namespaces: new[] { "WebBanRauCuQua.Controllers" }
+            );
+
+            routes.MapRoute(
                 name: "Contact",
                 url: "lien-he",
                 defaults: new { controller = "Contact", action = "Index", alias = UrlParameter.Optional },
@@ -75,7 +82,7 @@ namespace WebBanRauCuQua
                 defaults: new { controller = "Articles", action = "Index", alias = UrlParameter.Optional },
                 namespaces: new[] { "WebBanRauCuQua.Controllers" }
             );
-
+          
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",

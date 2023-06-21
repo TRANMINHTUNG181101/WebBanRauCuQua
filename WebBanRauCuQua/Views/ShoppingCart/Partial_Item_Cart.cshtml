@@ -27,7 +27,7 @@
                 <td>@item.CategoryName</td>
                 <td>@WebBanRauCuQua.Common.Common.FormatNumber(item.Price, 0)</td>
                 <td>
-                    <input type="number" class="form-control" id="Quantity_@item.ProductId" value="@item.Quantity" />
+                    <input type="number" class="form-control" id="Quantity_@item.ProductId" value="@item.Quantity" min="1" />
                 </td>
                 <th>@WebBanRauCuQua.Common.Common.FormatNumber(item.TotalPrice, 2)</th>
                 <td class="text-right">

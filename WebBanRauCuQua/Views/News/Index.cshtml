@@ -39,6 +39,8 @@
             list-style: none;
             margin: 0;
             padding: 0;
+            align-items: center;
+            justify-content: center;
         }
 
             .pagination-row .pagination li {
@@ -60,10 +62,10 @@
                 }
 </style>
 
-<div class="container news_selection_container">
+<div class="container news_selection_container" style="font-family: Times New Roman, sans-serif;">
     <div class="row">
         <div class="col-md-12">
-            <h1 class="title-news">Tin tức</h1>
+            <h1 class="title-news" style="font-size: 40px">Tin tức</h1>
         </div>
     </div>
     @if (Model != null && Model.Any())
@@ -78,8 +80,8 @@
                 </div>
                 <div class="col-md-9">
                     <div class="content-box">
-                        <h3><a href="/chi-tiet-tin-tuc/@item.Alias-@item.Id" title="@item.Title">@item.Title</a></h3>
-                        <div class="description-box">
+                        <h3><a href="/chi-tiet-tin-tuc/@item.Alias-@item.Id" title="@item.Title" style="font-size: 26px">@item.Title</a></h3>
+                        <div class="description-box" style="font-size: 16px">
                             @item.Description
                         </div>
                     </div>
@@ -87,8 +89,7 @@
             </div>
         }
         <div class="row pagination-row">
-            <div class="col-6"></div>
-            <div class="col-6" style="text-align:right;">
+            <div class="col-12">
                 @Html.PagedListPager(Model, page => Url.Action("Index", new { page }))
             </div>
         </div>

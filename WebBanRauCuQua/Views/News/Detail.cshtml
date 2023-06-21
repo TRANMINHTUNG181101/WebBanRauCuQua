@@ -27,18 +27,18 @@
     }
 </style>
 
-<div class="container news_selection_container">
+<div class="container news_selection_container" style="font-family: Times New Roman, sans-serif;">
     @if (Model != null)
     {
         <div class="row">
             <div class="col-md-12">
-                <h1 class="title-news">@Model.Title</h1>
+                <h1 class="title-news" style="font-size: 42px; font-weight: bold">@Model.Title</h1>
             </div>
         </div>
         <div class="row">
-            <div class="col-md-12">
+            @*<div class="col-md-12">
                 @Model.Description
-            </div>
+            </div>*@
             <div class="col-md-12">
                 @Html.Raw(Model.Detail)
             </div>

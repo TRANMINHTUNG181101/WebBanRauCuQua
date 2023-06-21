@@ -231,6 +231,14 @@
     <Compile Include="Migrations\202305311716167_EditCategory.Designer.cs">
       <DependentUpon>202305311716167_EditCategory.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202306021721299_EditOrderView.cs" />
+    <Compile Include="Migrations\202306021721299_EditOrderView.Designer.cs">
+      <DependentUpon>202306021721299_EditOrderView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202306031215553_AddStatus.cs" />
+    <Compile Include="Migrations\202306031215553_AddStatus.Designer.cs">
+      <DependentUpon>202306031215553_AddStatus.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\CommonAbstract.cs" />
@@ -253,6 +261,7 @@
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\OrderViewModel.cs" />
+    <Compile Include="Models\Payments\VnPayLibrary.cs" />
     <Compile Include="Models\SettingSystemViewModel.cs" />
     <Compile Include="Models\ShoppingCart.cs" />
     <Compile Include="Models\ThongKeViewModel.cs" />
@@ -3497,6 +3506,9 @@
     <Content Include="Content\assets\plugins\moment\locales.min.js.map" />
     <Content Include="Content\assets\plugins\moment\moment-with-locales.min.js.map" />
     <Content Include="Content\assets\plugins\moment\moment.min.js.map" />
+    <Content Include="Areas\Admin\Views\ProductCategory\Edit.cshtml" />
+    <None Include="Properties\PublishProfiles\tmtung-001-site1 - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\tmtung-001-site1 - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -3598,6 +3610,8 @@
     <Content Include="Views\News\Index.cshtml" />
     <Content Include="Views\News\Detail.cshtml" />
     <Content Include="Views\Articles\Index.cshtml" />
+    <Content Include="Views\ShoppingCart\VnpayReturn.cshtml" />
+    <Content Include="Views\Products\Partial_ProductSellers.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -3635,6 +3649,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202305311716167_EditCategory.resx">
       <DependentUpon>202305311716167_EditCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202306021721299_EditOrderView.resx">
+      <DependentUpon>202306021721299_EditOrderView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202306031215553_AddStatus.resx">
+      <DependentUpon>202306031215553_AddStatus.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

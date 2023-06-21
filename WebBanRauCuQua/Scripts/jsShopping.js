@@ -13,7 +13,7 @@ $(document).ready(function () {
         }
 
         //alert(id + " " + quantity);
-
+        // xu ly bieu tuong gio hang tang so luong o ben ngoai
         $.ajax({
             url: '/shoppingcart/addtocart',
             type: 'POST',

@@ -16,8 +16,7 @@ namespace WebBanRauCuQua.Controllers
         // GET: News
         public ActionResult Index(int? page)
         {
-
-            var pageSize = 2;
+            var pageSize = 5;
             if (page == null)
             {
                 page = 1;
